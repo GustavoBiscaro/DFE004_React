@@ -15,3 +15,7 @@ a {
     color: red;
     transition: 0.6s;
 }
+
+a:hover {
+    color: rgb(129, 15, 15);
+}
