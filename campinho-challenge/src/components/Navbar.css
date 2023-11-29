@@ -21,6 +21,16 @@
     padding: .2rem .8rem;
     border-radius: 4px;
     border: none;
+    font-weight: bold;
+    text-align: center;
+}
+#navbar input:hover {
+    padding: .2rem .8rem;
+    border-radius: 4px;
+    border: 3px inset red;
+   transition: all .3s;
+    color: white;
+    background: #000;
 }
 
 #navbar form button {
