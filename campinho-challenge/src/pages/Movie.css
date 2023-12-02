@@ -1,0 +1,64 @@
+.page-movie{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    margin: 3rem auto;
+  
+}
+
+.page-movie img {
+    width: 40%;
+  
+    border: 2px outset white;
+}
+
+.page-movie svg {
+    font-size: 1.5rem;
+    color: red
+}
+
+.page-movie .movie-card {
+    text-align: center;
+}
+
+.page-movie .movie-card img, .page-movie .movie-card h2, .page-movie .movie-card p {
+    margin-bottom: 1rem;
+}
+
+.page-movie, .movie-card h2 {
+    font-size: 1.5rem;
+}
+
+.page-movie .movie-card p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.tagline {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.info {
+    margin-bottom: 1.5rem ;
+    opacity: .7;
+    
+    padding: 15px;
+}
+
+.info h3 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
+}
+.description {
+    padding-bottom: 10rem;
+}
+.description p {
+    line-height: 1.4rem;
+}

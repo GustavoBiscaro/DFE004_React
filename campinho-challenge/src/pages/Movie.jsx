@@ -1,11 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import { Link } from 'react-router-dom'
+
 import {
-  BsGraphUp,
-  BsWallet2,
+  BsCameraReels,
+  BsArrowUp,
   BsHourglassSplit,
-  BsFillFileEarmarkTextFill,
+  BsChatLeftDotsFill,
 } from "react-icons/bs";
 
 import Card from '../components/Card';
@@ -21,49 +24,65 @@ const Movie = () => {
 
   const getMovie = async (url) => {
     const response = await axios.get(url);
-    console.log(response.data);
     setMovie(response.data)
+
+    console.log(response.data)
+  };
+  const format = (num) => {
+    return num.toLocaleString("en-US", {
+      style:"currency",
+      currency: "USD",
+    });
   };
 
   useEffect(() => {
-    const prodUrl = `${moviesURL}${id}?${apiKey}`
+    const prodUrl = `${moviesURL}${id}?${apiKey}`;
     getMovie(prodUrl)
   }, []);
 
   return (
-    <div className="movie-page">
-      {movie && (
-        <>
-          <Card movie={movie} showLink={false} />
-          <p className="tagline">{movie.tagline}</p>
-          <div className="info">
-            <h3>
-              <BsWallet2 /> Orçamento:
-            </h3>
-            <p>{formatCurrency(movie.budget)}</p>
-          </div>
-          <div className="info">
-            <h3>
-              <BsGraphUp /> Receita:
-            </h3>
-            <p>{formatCurrency(movie.revenue)}</p>
-          </div>
-          <div className="info">
-            <h3>
-              <BsHourglassSplit /> Duração:
-            </h3>
-            <p>{movie.runtime} minutos</p>
-          </div>
-          <div className="info description">
-            <h3>
-              <BsFillFileEarmarkTextFill /> Descrição:
-            </h3>
+  <div className='page-movie'>
+    {movie && (
+         <>
+         <Card movie={movie} showLink={false} />
+         <p className="tagline">{movie.tagline}</p>
+         <div className="info">
+          <h3>
+            <BsArrowUp /> Budgeting:
+          </h3>
+            <p>{format(movie.budget)}</p>
+         </div>
+
+         <div className="info">
+          <h3>
+            < BsCameraReels /> Sales:
+          </h3>
+            <p>{format(movie.revenue)}</p>
+         </div>
+
+         <div className="info">
+          <h3>
+            <BsHourglassSplit /> Duration:
+          </h3>
+            <p>{movie.runtime} {"minutes"}</p>
+         </div>
+
+         <div className="info description">
+          <h3>
+            <BsChatLeftDotsFill /> Description:
+          </h3>
             <p>{movie.overview}</p>
-          </div>
+         </div>
+
+         <div >
+         <Link className='backHome' to="/">Back to Home</Link>
+         </div>
         </>
-      )}
-    </div>
+         
+    )}
+  </div>
   );
+
 };
 
 
