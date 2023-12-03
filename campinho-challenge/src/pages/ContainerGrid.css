@@ -2,7 +2,7 @@
     color: #fff;
     font-size: 2.5rem;
     text-align: center;
-    margin: 2rem 0 1rem;
+    margin: 4rem 0 1rem;
 }
 
 .title .query-text {
@@ -13,30 +13,34 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    flex-direction: row;
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 50%;
     margin: 0 auto;
 }
 
 .movies-container div {
-    width: 30%;
+    width: calc(25% - 1.5rem);
     color: #fff;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.0rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #111;
     padding: 1rem;
+    border: 2px outset red;
 }
 
 .movies-container div img {
     max-width: 100%;
+    border: 2px outset white;
 }
 
 .movies-container div img,
 .movies-container div h2,
 .movies-container div p {
     margin-bottom: 1rem;
+    padding: 10px;
 }
 
 .movies-container svg {
