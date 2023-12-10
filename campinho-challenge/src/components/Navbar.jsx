@@ -22,7 +22,7 @@ const Navbar = () => {
     return (
         <nav id="navbar">
             <h2>
-                <Link to="/"><BiFilm/>Campinho Challenge</Link>
+                <Link to="/"><BiFilm className='logo'/>Campinho Challenge</Link>
             </h2>
             <form onSubmit={handleEnvio}>
                 <input type="text" placeholder="Search the movie" 
