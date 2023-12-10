@@ -15,7 +15,7 @@ Como o nome sugere, o react-router-dom trabalha o roteamento da aplicação gra�
 # EXECUÇÃO
 Para executar a aplicação, além de ter todos estes pacotes, conforme instrução, você deve ir até a pasta raiz do projeto com um "cd campinho-challenge" e digitar "npm run dev" no terminal. Com o local gerado, basta clicar "CTRL" + "Enter" e abrirá uma tela semelhante a essa inicialmente.
 
-![mainFrame](./public/assets/Vite%20+%20React.png)
+![mainFrame](https://miro.medium.com/v2/resize:fit:1400/1*ddwrlzb93qg5_6FNep1fZA.png)
 
 # NECESSÁRIO
 Foi necessário criar um cadastro no themoviedb.org e solicitei uma chave de API.
