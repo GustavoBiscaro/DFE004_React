@@ -6,9 +6,12 @@ import App from './App'
 import './index.css'
 
 
+
+
 import Home from './pages/Home';
 import Search from './pages/Search';
 import Movie from './pages/Movie';
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
